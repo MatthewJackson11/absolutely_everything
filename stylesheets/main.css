@@ -1,0 +1,236 @@
+/* Main CSS*/
+
+/*==================== 
+Main Styles
+====================*/
+body{
+/*	background-color: #22ff22;*/
+	background-color: #ddd;
+}
+
+#wrapper {
+	width:900px;
+	margin-left: auto;
+	margin-right: auto;
+	
+	border-radius: 20px; 
+}
+
+
+
+
+
+/*==================== 
+Header Styles
+====================*/
+header {
+	padding: 20px;
+	border-radius: 20px;
+	border: 3px solid #000;
+	text-align: center;
+}
+
+
+/*==================== 
+Nav Styles
+====================*/
+nav {
+	border:1px solid black;
+}
+nav ul {
+	list-style: none;
+}
+
+
+
+
+/*==================== 
+Footer Styles
+====================*/
+footer{
+	text-align: center; 
+	padding:20px;
+	background-color:#ff2222 ;
+	margin-top: 200px;
+}
+
+
+
+/*==================== 
+CSS Flex Box Styles
+====================*/
+	.flex_child {
+		padding : 20px;
+		border:1px solid black;
+
+	}
+
+	/*==== Parent 1 ==== */
+	#flex_parent1 {
+		display: flex; /* or inline flex*/
+		flex-direction: row-reverse;
+		/* row (default): left to right in ltr; right to left in rtl
+		row-reverse: right to left in ltr; left to right in rtl
+		column: same as row but top to bottom
+		column-reverse: same as row-reverse but bottom to top */
+
+	}
+	#flex_parent1 div.flex_child {
+		background-color: #ffffff;
+		width:100px;
+		height: 100px;
+	}
+
+	/*==== Parent 2 ==== */
+	#flex_parent2 {
+		display: flex; /* or inline flex*/
+
+		/*flex-direction: row;
+		flex-wrap: wrap;*/ 
+		/* nowrap (default): all flex items will be on one line
+		wrap: flex items will wrap onto multiple lines, from top to bottom.
+		wrap-reverse: flex items will wrap onto multiple lines from bottom to top.*/
+
+		flex-flow: row-reverse wrap;
+	}
+	#flex_parent2 div.flex_child {
+		background-color: #ff0000;
+		width:100px;
+		height: 100px;
+	}
+
+
+	/*==== Parent 3 ==== */
+	#flex_parent3 {
+		display: flex;
+		justify-content: space-around;
+		/*justify-content: flex-start | flex-end | center | space-between | space-around;*/
+		/*flex-start (default): items are packed toward the start line
+		flex-end: items are packed toward to end line
+		center: items are centered along the line
+		space-between: items are evenly distributed in the line; first item is on the start line, last item on the end line
+		space-around: items are evenly distributed in the line with equal space around them. Note that visually the spaces aren't equal, since all the items have equal space on both sides. The first item will have one unit of space against the container edge, but two units of space between the next item because that next item has its own spacing that applies.*/
+	}
+	#flex_parent3 div.flex_child {
+		background-color: #ffff00;
+		width:100px;
+		height: 100px;
+	}
+
+
+	/*==== Parent 4 ==== */
+	#flex_parent4 {
+		border:1px solid black;
+		height:200px;
+		display: flex;
+		align-items:flex-end; ;
+		/*align-items: flex-start | flex-end | center | baseline | stretch;*/
+		/*flex-start: cross-start margin edge of the items is placed on the cross-start line
+		flex-end: cross-end margin edge of the items is placed on the cross-end line
+		center: items are centered in the cross-axis
+		baseline: items are aligned such as their baselines align
+		stretch (default): stretch to fill the container (still respect min-width/max-width)*/
+	}
+	#flex_parent4 div.flex_child {
+		background-color: #00ffff;
+		width:100px;
+		height: 100px;
+	}
+
+
+	/*==== Parent 5 ==== */
+	#flex_parent5 {
+		display: flex;
+	}
+	#flex_parent5 div.flex_child {
+		background-color: #ff00ff;
+		width:100px;
+		height: 100px;
+	}
+	#flex_child5_1{
+		order:4;
+	}
+	#flex_child5_2{
+		order:1;
+	}
+	#flex_child5_3{
+		order:5;
+	}
+	#flex_child5_4{
+		order:2;
+	}
+	#flex_child5_5{
+		order:3;
+	}
+
+	/*==== Parent 6 ==== */
+	#flex_parent6 {
+		display: flex;
+	}
+	#flex_parent6 div.flex_child {
+		background-color: #990099;
+
+		height: 100px;
+	}
+
+	#flex_child6_2{
+		flex-grow:3;
+	}
+	#flex_child6_1{
+		flex-grow:1;
+	}
+	#flex_child6_3{
+		flex-grow:1;
+	}
+
+
+	/*==== Parent 7 ==== */
+	#flex_parent7 {
+		display: flex;
+	}
+	#flex_parent7 div.flex_child {
+		background-color: #00ff00;
+
+		height: 100px;
+	}
+
+	#flex_child7_2{
+		flex-shrink:3;
+	}
+	#flex_child7_1{
+		flex-shrink:1;
+	}
+	#flex_child7_3{
+		flex-shrink:1;
+	}
+
+
+
+	/*==== Parent 8 ==== */
+	#flex_parent8 {
+		display: flex;
+		align-items: flex-end;
+		height: 200px;
+		border:1px solid black;
+	}
+	#flex_parent8 div.flex_child {
+		background-color: #eeeeee;
+		height: 100px;
+		width: 100px;
+	}
+	#flex_child8_2{
+		align-self: flex-start;
+		/*align-self: auto | flex-start | flex-end | center | baseline | stretch;*/
+	}
+	#flex_child8_1{
+		flex-shrink:1;
+	}
+	#flex_child8_3{
+		flex-shrink:1;
+	}
+
+
+
+
+
+
